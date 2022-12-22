@@ -9,6 +9,32 @@
  --light-color:#F4F4FD;
 }
 
+/*робимо бордрер-бокс*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*скидаємо розмітку для основних такстових елементів*/
+h1,
+h2,
+h3,
+h4,
+h5, 
+h6,
+p {
+    margin: 0;
+}
+
+/*скидаємо все для списків*/
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
@@ -41,9 +67,23 @@ body {
     overflow: hidden;
 }
 
+
+
 /*роблю оформлення header*/
 .header{
     color: var(--title-text-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+}
+
+/*задаємо параметри для контейнера*/
+.container {
+    width: 1128px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid red;
+    margin: 0 auto;
 }
 
 .logo {
@@ -69,8 +109,7 @@ body {
 
 .header-link {
     color: var(--title-text-color);
-    font-weight: 600;
-    line-height: 24px;
+    font-weight: 600;  
     font-size: 16px;
     line-height: calc(24/16);
     letter-spacing: 0.02em;
@@ -100,6 +139,8 @@ body {
 /*оформлення першої секції з заголовками*/
 .title {
     background-color: var(--title-text-color);
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .main-title {
@@ -110,28 +151,29 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 48px;
 }
 
 .main-button {
     background-color: var(--primary-brand-color);
     color: #FFFFFF;
     font-family: inherit;
-    font-weight: 600;
-    line-height: 19px;
+    font-weight: 500; 
+    line-height: calc(24/16);
     border: none;
     cursor: pointer;
+    padding: 16px, 32px, 16px, 32px;
 }
 
-.main-button:hover{
-    background-color: var(--primary-brand-color);
-}
-
-.main-button:focus {
+.main-button:hover,
+.main-button:focus
+{
     background-color: #404BBF;
 }
 
 /*офорлюю частину з текстом*/
 .offer {
+    margin-top: 120px;
 }
 
 .h3-title {
@@ -151,6 +193,9 @@ body {
 
 
 /*частина з картинками*/
+.images {
+    margin-top: 120px;
+}
 
 .title-images {
     color: var(--title-text-color);
@@ -159,12 +204,18 @@ body {
     line-height: calc(40/36);
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 
 /*частина команди*/
 .team {
     background-color: var(--light-color);
+    margin-top: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+
 }
 
 .team-title {
@@ -174,6 +225,7 @@ body {
     line-height: calc(40/36);
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 .list-taem {
     color: var(--primary-text-color);
@@ -187,6 +239,8 @@ body {
 /*футер*/
 .footer {
     background-color: var(--title-text-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .logo-footer {
@@ -205,11 +259,15 @@ body {
     font-size: 16px;
     line-height: calc(21/16);
     letter-spacing: 0.02em;
+    margin-top: 16px;
 }
 
 
 /*сторінка портфоліо*/
 /*секція з кнопками*/
+.btn-section {
+    margin-top: 96px;
+}
 
 .portfolio-btn {
     background-color: var(--accent-color);
@@ -233,6 +291,7 @@ body {
 
 .portfolio-li {
     text-decoration: none;
+    margin-top: 72px;
 }
 
 .h2-portfolio {
@@ -251,6 +310,10 @@ body {
     line-height: calc(24/16);
     letter-spacing: 0.02em;
     text-decoration: none;
+}
+
+.footer-portfolio {
+    mar
 }
 
 
