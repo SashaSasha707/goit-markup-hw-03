@@ -34,6 +34,11 @@ ol {
     padding: 0;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 body {
     background-color: #FFFFFF;
@@ -68,25 +73,37 @@ body {
 }
 
 
+/*задаємо параметри для контейнера*/
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 
+    /*outline: 2px solid red;
+    margin: 0 auto;*/
+}
+
+/*------HEADER----*/
 /*роблю оформлення header*/
 .header{
     color: var(--title-text-color);
-    padding-top: 24px;
-    padding-bottom: 24px;
-    
 }
 
-/*задаємо параметри для контейнера*/
-.container {
-    width: 1128px;
-    padding-left: 15px;
-    padding-right: 15px;
-    outline: 2px solid red;
-    margin: 0 auto;
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
+    margin-right: 76px;
+
     color: var(--title-text-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -105,6 +122,13 @@ body {
     line-height: calc(24/18);
     letter-spacing: 0.03em;
     text-decoration: none
+}
+
+.header-list {
+    display: flex;
+    gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .header-link {
@@ -136,33 +160,52 @@ body {
     color: #404BBF;
 }
 
+.list-contact {
+    display: flex;
+    margin-left: auto;
+    gap: 40px;
+}
+
 /*оформлення першої секції з заголовками*/
 .title {
     background-color: var(--title-text-color);
     padding-top: 188px;
     padding-bottom: 188px;
+    align-content: center;
+    text-align: center;
 }
 
+
 .main-title {
+    margin-bottom: 48px;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+
     color:#FFFFFF;
     font-weight: 600;
     font-size: 56px;
     line-height: calc(60/56);
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    text-align: center;
-    margin-bottom: 48px;
 }
 
 .main-button {
+    display: inline-block;
+    align-items:center;
+    min-width: 169px;
+    height: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
     background-color: var(--primary-brand-color);
     color: #FFFFFF;
     font-family: inherit;
     font-weight: 500; 
     line-height: calc(24/16);
-    border: none;
     cursor: pointer;
     padding: 16px, 32px, 16px, 32px;
+    border-color: transparent;
 }
 
 .main-button:hover,
@@ -172,11 +215,24 @@ body {
 }
 
 /*офорлюю частину з текстом*/
+
 .offer {
     margin-top: 120px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.offer-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    min-width: 264px;
+    min-height: 72px;
 }
 
 .h3-title {
+    margin-bottom: 8px;
+
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 20px;
@@ -197,6 +253,13 @@ body {
     margin-top: 120px;
 }
 
+.images-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
 .title-images {
     color: var(--title-text-color);
     font-weight: 600;
@@ -205,6 +268,7 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     margin-bottom: 72px;
+    text-align: center;
 }
 
 
@@ -214,8 +278,16 @@ body {
     margin-top: 120px;
     padding-top: 120px;
     padding-bottom: 120px;
+}
 
-
+.ul-team {
+    display: flex;
+    gap: 24px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .team-title {
@@ -226,14 +298,25 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     margin-bottom: 72px;
+    text-align: center;
 }
-.list-taem {
+
+.list-team {
+    width: 264px;
+    height: 380px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+
     color: var(--primary-text-color);
-    font-size: 36px;
-    line-height: calc(40/36);
+    font-size: 16px;
+    line-height: calc(24/16);
     letter-spacing: 0.02em;
 }
 
+.team-text {
+    margin-top: 32px;
+}
 
 
 /*футер*/
@@ -241,6 +324,11 @@ body {
     background-color: var(--title-text-color);
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.footer > .container {
+    margin-left: 0 auto;
+    margin-left: 0 auto;
 }
 
 .logo-footer {
@@ -255,11 +343,15 @@ body {
 }
 
 .footer-text {
+    width: 264px;
+    height: 72px;
+    margin-top: 16px;
+    
     color: var(--accent-color);
     font-size: 16px;
-    line-height: calc(21/16);
+    line-height: calc(24/16);
     letter-spacing: 0.02em;
-    margin-top: 16px;
+    
 }
 
 
@@ -267,9 +359,20 @@ body {
 /*секція з кнопками*/
 .btn-section {
     margin-top: 96px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .portfolio-btn {
+    padding-top: 12px;
+    padding-left: 24px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+
     background-color: var(--accent-color);
     font-family: inherit;
     color: var(--primary-brand-color);
@@ -290,18 +393,28 @@ body {
 /*секція з картинками*/
 
 .portfolio-li {
-    text-decoration: none;
     margin-top: 72px;
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px; 
+    row-gap: 48px;
+}
+
+.list-portfolio {
+
+  
 }
 
 .h2-portfolio {
+    margin-bottom: 8px;
+    
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 20px;
     line-height: calc(24/20);
     letter-spacing: 0.02em;
     text-decoration: none;
-
 }
 
 .text-portfolio {
@@ -312,8 +425,21 @@ body {
     text-decoration: none;
 }
 
+.text {
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-top: 0;
+
+    max-width: 360px;
+    height: 120px;
+
+    border: 0.5px solid #E7E9FC;
+    
+}
+
 .footer-portfolio {
-    mar
+    margin-top: 120px;
 }
 
 
